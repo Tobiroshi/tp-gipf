@@ -29,6 +29,15 @@ pipeline {
                 -Dsonar.host.url=http://172.17.0.1:9000 \
                 -Dsonar.token=sqp_75275040e983dd68e46e3a28c0ccc4390ba19895"
             }
+
+        stage ("Générer artifact .jar") {
+            steps {
+                sh "./gradlew -D https.proxyHost=proxy1-rech.uphf.fr -D https.proxyPort=3128 jar"
+            }
+        }
+
+
+    
         }     
     }
 }
