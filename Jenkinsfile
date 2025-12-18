@@ -15,7 +15,7 @@ pipeline {
             }
         }
 
-         stage ("Vérif coverage  JaCoCo") {
+        stage ("Vérif coverage  JaCoCo") {
             steps {
                 sh "./gradlew -D https.proxyHost=proxy1-rech.uphf.fr -D https.proxyPort=3128 test"
             }
@@ -23,7 +23,7 @@ pipeline {
 
         stage ("Scanner avec Sonar") {
             steps {
-                sh "./gradlew -Dhttps.proxyHost=proxy1-rech.uphf.fr -Dhttps.proxyPort=3128 sonar --Dsonar.projectKey=tpControle -Dsonar.projectName='TpControle' -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_75275040e983dd68e46e3a28c0ccc4390ba19895"
+                sh "./gradlew -Dhttps.proxyHost=proxy1-rech -Dhttps.proxyPort=3128 sonar --Dsonar.projectKey=tpControle -Dsonar.projectName='TpControle' -Dsonar.host.url=http://localhost:9000 -Dsonar.token=sqp_75275040e983dd68e46e3a28c0ccc4390ba19895"
             }
         }
 
