@@ -29,10 +29,7 @@ pipeline {
                 -Dsonar.host.url=http://localhost:9000 \
                 -Dsonar.token=sqp_75275040e983dd68e46e3a28c0ccc4390ba19895"
             }
-        }
-
-
-        
+        }     
       
     }
 }
