@@ -8,5 +8,7 @@ pipeline {
                 git branch: 'master', url: 'https://github.com/tobiroshi/tp-gipf.git/'
             }
         }
+    }
+}
         
        
