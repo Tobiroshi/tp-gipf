@@ -23,7 +23,7 @@ pipeline {
 
         stage ("Scanner avec Sonar") {
             steps {
-                sh "./gradlew -Dhttp.proxyHost=proxy1-rech.uphf.fr -Dhttp.proxyPort=3128 sonar \
+                sh "./gradlew -D https.proxyHost=proxy1-rech.uphf.fr -D http.proxyPort=3128 sonar \
                 -Dsonar.projectKey=tpControle \
                 -Dsonar.projectName='TpControle' \
                 -Dsonar.host.url=http://172.17.0.1:9000 \
