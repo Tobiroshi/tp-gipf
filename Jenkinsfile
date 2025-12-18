@@ -30,7 +30,6 @@ pipeline {
                 -Dsonar.token=sqp_75275040e983dd68e46e3a28c0ccc4390ba19895"
             }
         }     
-      
     }
 }
         
